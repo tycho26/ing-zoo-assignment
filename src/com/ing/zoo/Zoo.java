@@ -1,6 +1,14 @@
 package com.ing.zoo;
 
+import java.util.ArrayList;
 import java.util.Scanner;
+
+import com.ing.zoo.animals.Hippo;
+import com.ing.zoo.animals.Lion;
+import com.ing.zoo.animals.Pig;
+import com.ing.zoo.animals.Tiger;
+import com.ing.zoo.animals.Zebra;
+import com.ing.zoo.animals.Animal;
 
 public class Zoo {
     public static void main(String[] args)
@@ -11,28 +19,41 @@ public class Zoo {
         commands[2] = "give meat";
         commands[3] = "perform trick";
 
-        Lion henk = new Lion();
-        henk.name = "henk";
-        Hippo elsa = new Hippo();
-        elsa.name = "elsa";
-        Pig dora = new Pig();
-        dora.name = "dora";
-        Tiger wally = new Tiger();
-        wally.name = "wally";
-        Zebra marty = new Zebra();
-        marty.name = "marty";
+        Lion henk = new Lion(
+            "henk", "roooaoaaaaar"
+        );
+        Hippo elsa = new Hippo(
+            "elsa", "splash"
+        );
+        Pig dora = new Pig(
+            "dora", "splash"
+        );
+        Tiger wally = new Tiger(
+            "wally",
+            "rraaarww"
+        );
+        Zebra marty = new Zebra(
+            "marty",
+            "zebra zebra"
+        );
         
+        ArrayList<Animal> animals = new ArrayList<>();
+        animals.add(henk);
+        animals.add(elsa);
+        animals.add(dora);
+        animals.add(wally);
+        animals.add(marty);
+
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
 
         String input = scanner.nextLine();
         if(input.equals(commands[0]))
         {
-            henk.sayHello();
-            elsa.sayHello();
-            dora.sayHello();
-            wally.sayHello();
-            marty.sayHello();
+            for (int i = 0; i < animals.size(); i++) {
+  
+                animals.get(i).sayHello();
+            }
         }
         else if(input.equals(commands[0] + " henk"))
         {
