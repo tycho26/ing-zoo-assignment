@@ -11,7 +11,9 @@ import com.ing.zoo.animals.Tiger;
 import com.ing.zoo.animals.Trickster;
 import com.ing.zoo.animals.Zebra;
 import com.ing.zoo.animals.Animal;
+import com.ing.zoo.animals.Ape;
 import com.ing.zoo.animals.Carnivor;
+import com.ing.zoo.animals.Cow;
 import com.ing.zoo.animals.Herbivor;
 
 public class Zoo {
@@ -40,13 +42,24 @@ public class Zoo {
             "marty",
             "zebra zebra"
         );
-        
+        Ape diddy = new Ape(
+            "diddy",
+            "I have returned to monke"
+        );
+        Cow bessy = new Cow(
+            "bessy",
+            "MOOOOOOOOOOOOO!!!"
+        );
+
+
         ArrayList<Animal> animals = new ArrayList<>();
         animals.add(henk);
         animals.add(elsa);
         animals.add(dora);
         animals.add(wally);
         animals.add(marty);
+        animals.add(diddy);
+        animals.add(bessy);
 
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
