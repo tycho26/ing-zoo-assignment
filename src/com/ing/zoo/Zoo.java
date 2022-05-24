@@ -8,6 +8,7 @@ import com.ing.zoo.animals.Lion;
 import com.ing.zoo.animals.Omnivor;
 import com.ing.zoo.animals.Pig;
 import com.ing.zoo.animals.Tiger;
+import com.ing.zoo.animals.Trickster;
 import com.ing.zoo.animals.Zebra;
 import com.ing.zoo.animals.Animal;
 import com.ing.zoo.animals.Carnivor;
@@ -91,11 +92,25 @@ public class Zoo {
                 }
             }
         }
+        // give meat
         else if(input.equals(commands[2])){
             for (int i = 0; i < animals.size(); i++) {
                 if(Carnivor.class.isAssignableFrom(animals.get(i).getClass()) || Omnivor.class.isAssignableFrom(animals.get(i).getClass())){
                     try {
                         animals.get(i).getClass().getDeclaredMethod("eatMeat").invoke(animals.get(i));
+                        
+                    } catch (Exception e) {
+                        //TODO: handle exception
+                    }
+                }
+            }
+        }
+        //perform trick
+        else if(input.equals(commands[3])){
+            for (int i = 0; i < animals.size(); i++) {
+                if(Trickster.class.isAssignableFrom(animals.get(i).getClass())){
+                    try {
+                        animals.get(i).getClass().getDeclaredMethod("performTrick").invoke(animals.get(i));
                         
                     } catch (Exception e) {
                         //TODO: handle exception
