@@ -38,6 +38,22 @@ public class Zoo {
         {
             henk.sayHello();
         }
+        else if(input.equals(commands[0] + " elsa"))
+        {
+            elsa.sayHello();
+        }
+        else if(input.equals(commands[0] + " dora"))
+        {
+            dora.sayHello();
+        }
+        else if(input.equals(commands[0] + " wally"))
+        {
+            wally.sayHello();
+        }
+        else if(input.equals(commands[0] + " marty"))
+        {
+            marty.sayHello();
+        }
         else
         {
             System.out.println("Unknown command: " + input);
