@@ -21,14 +21,38 @@ public class Zoo {
         wally.name = "wally";
         Zebra marty = new Zebra();
         marty.name = "marty";
-
+        
         Scanner scanner = new Scanner(System.in);
         System.out.print("Voer uw command in: ");
 
         String input = scanner.nextLine();
-        if(input.equals(commands[0] + " henk"))
+        if(input.equals(commands[0]))
         {
             henk.sayHello();
+            elsa.sayHello();
+            dora.sayHello();
+            wally.sayHello();
+            marty.sayHello();
+        }
+        else if(input.equals(commands[0] + " henk"))
+        {
+            henk.sayHello();
+        }
+        else if(input.equals(commands[0] + " elsa"))
+        {
+            elsa.sayHello();
+        }
+        else if(input.equals(commands[0] + " dora"))
+        {
+            dora.sayHello();
+        }
+        else if(input.equals(commands[0] + " wally"))
+        {
+            wally.sayHello();
+        }
+        else if(input.equals(commands[0] + " marty"))
+        {
+            marty.sayHello();
         }
         else
         {
