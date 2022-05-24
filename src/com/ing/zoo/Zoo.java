@@ -88,9 +88,17 @@ public class Zoo {
         {
             wally.sayHello();
         }
-        else if(input.equals(commands[0] + " marty1"))
+        else if(input.equals(commands[0] + " marty"))
         {
             marty.sayHello();
+        }
+        else if(input.equals(commands[0] + " diddy"))
+        {
+            diddy.sayHello();
+        }
+        else if(input.equals(commands[0] + " bessy"))
+        {
+            bessy.sayHello();
         }
         // give leaves
         else if(input.equals(commands[1])){
